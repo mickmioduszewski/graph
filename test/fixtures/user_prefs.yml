@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_name: MyString
+  comment: MyString
+  graph_direction: MyString
+  graph_root_node_size: 1
+  graph_root_edge_size: 1
+  graph_size_reduction: 1
+  graph_up_depth: 1
+  graph_down_depth: 1
+  user_id: 1
+
+two:
+  user_name: MyString
+  comment: MyString
+  graph_direction: MyString
+  graph_root_node_size: 1
+  graph_root_edge_size: 1
+  graph_size_reduction: 1
+  graph_up_depth: 1
+  graph_down_depth: 1
+  user_id: 1

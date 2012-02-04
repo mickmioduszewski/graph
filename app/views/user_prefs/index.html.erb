@@ -1,0 +1,39 @@
+<h1>Listing user_prefs</h1>
+
+<table>
+  <tr>
+    <th>User name</th>
+    <th>Comment</th>
+    <th>Graph direction</th>
+    <th>Graph root node size</th>
+    <th>Graph root edge size</th>
+    <th>Graph size reduction</th>
+    <th>Graph up depth</th>
+    <th>Graph down depth</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_prefs.each do |user_pref| %>
+  <tr>
+    <td><%= user_pref.user_name %></td>
+    <td><%= user_pref.comment %></td>
+    <td><%= user_pref.graph_direction %></td>
+    <td><%= user_pref.graph_root_node_size %></td>
+    <td><%= user_pref.graph_root_edge_size %></td>
+    <td><%= user_pref.graph_size_reduction %></td>
+    <td><%= user_pref.graph_up_depth %></td>
+    <td><%= user_pref.graph_down_depth %></td>
+    <td><%= user_pref.user_id %></td>
+    <td><%= link_to 'Show', user_pref %></td>
+    <td><%= link_to 'Edit', edit_user_pref_path(user_pref) %></td>
+    <td><%= link_to 'Destroy', user_pref, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User pref', new_user_pref_path %>

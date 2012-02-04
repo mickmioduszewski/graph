@@ -1,0 +1,18 @@
+<% @nodes_array = [@node]; @edges_array = [] %>
+
+<% @node_size_array = [current_user.user_pref.graph_root_node_size]; @node_size = current_user.user_pref.graph_root_node_size; @edge_size_array = []; @edge_size = current_user.user_pref.graph_root_edge_size; @size_reduction = current_user.user_pref.graph_size_reduction; @up_reach = current_user.user_pref.graph_up_depth; @down_reach = current_user.user_pref.graph_down_depth %> 
+
+<% @i = 0 %>
+<%= render :partial => "nodes/collect_node_up", :object => @node %>
+<%= render :partial => "nodes/collect_node_down", :object => @node %>
+<%= render :partial => "nodes/construct_graph_file" %>
+
+
+<p>
+
+<%@xx = `dot -Tcmapx -opublic/#{current_user.email}.map -Tpng -opublic/#{current_user.email}.png public/#{current_user.email}.dot`%> 
+<%= image_tag "/#{current_user.email}.png", {:usemap => "#G"}  %>
+
+<!--The following line reads an image file and applies it to the HTML to be used by the image-->
+<%my1_file = File.open("public/#{current_user.email}.map","r"); @filetext = my1_file.gets(nil); my1_file.close%> <%=raw @filetext%>
+</p>

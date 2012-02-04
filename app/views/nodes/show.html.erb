@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p><b>Name:</b><%= @node.name %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @node.description %>
+</p>
+
+<%@edge = Edge.new; @edge.source_id=@node.id; @edge.sink_id=@node.id%>
+
+<div id="headerDiv1">
+  <b><a id="myHeader1" href="javascript:toggleblock('myContent1','myHeader1', 'Create connections', 'Hide form');" >Create connections</a></b>
+</div>
+
+<div id="contentDiv1">
+	<div id="myContent1" style="display: none;"><%= render 'edges/form' %></div>     
+</div>
+
+
+
+<%= render :partial => "paint_graph" %>
+
+<%= link_to 'Edit', edit_node_path(@node) %> |
+<%= link_to 'Back', nodes_path %>

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @user_pref.user_name %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @user_pref.comment %>
+</p>
+
+<p>
+  <b>Graph direction:</b>
+  <%= @user_pref.graph_direction %>
+</p>
+
+<p>
+  <b>Graph root node size:</b>
+  <%= @user_pref.graph_root_node_size %>
+</p>
+
+<p>
+  <b>Graph root edge size:</b>
+  <%= @user_pref.graph_root_edge_size %>
+</p>
+
+<p>
+  <b>Graph size reduction:</b>
+  <%= @user_pref.graph_size_reduction %>
+</p>
+
+<p>
+  <b>Graph up depth:</b>
+  <%= @user_pref.graph_up_depth %>
+</p>
+
+<p>
+  <b>Graph down depth:</b>
+  <%= @user_pref.graph_down_depth %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @user_pref.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_pref_path(@user_pref) %> |
+<%= link_to 'Back', user_prefs_path %>

@@ -1,0 +1,53 @@
+<%= form_for(@user_pref) do |f| %>
+  <% if @user_pref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_pref.errors.count, "error") %> prohibited this user_pref from being saved:</h2>
+
+      <ul>
+      <% @user_pref.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_direction %><br />
+    <%= f.select :graph_direction, options_for_select(UserPref::GRAPH_ORIENTATION, @user_pref.graph_direction) %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_root_node_size %><br />
+    <%= f.number_field :graph_root_node_size %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_root_edge_size %><br />
+    <%= f.number_field :graph_root_edge_size %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_size_reduction %><br />
+    <%= f.select :graph_size_reduction, options_for_select(UserPref::GRAPH_SIZE_REDUCTION, @user_pref.graph_size_reduction) %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_up_depth %><br />
+    <%= f.select :graph_up_depth, options_for_select(UserPref::GRAPH_REACH, @user_pref.graph_up_depth) %>
+  </div>
+  <div class="field">
+    <%= f.label :graph_down_depth %><br />
+    <%= f.select :graph_down_depth, options_for_select(UserPref::GRAPH_REACH, @user_pref.graph_down_depth) %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<%if @i < @up_reach and !collect_node_up.edges_as_sink.empty?%>
+  <%@i += 1%>
+  <% node_size = (@node_size - @i*@size_reduction) > 0 ? @node_size - @i*@size_reduction : 1 %>
+  <% edge_size = (@edge_size - @i*@size_reduction) > 0 ? @edge_size - @i*@size_reduction : 1 %>
+  <% collect_node_up.edges_as_sink.each do |edge|  %>
+    <%if !@edges_array.include?(edge)%>
+      <%@edges_array = @edges_array << edge%>
+      <%@edge_size_array = @edge_size_array << edge_size%>
+      <%if !@nodes_array.include?(edge.source)%>
+        <%@nodes_array = @nodes_array << edge.source%>
+        <%@node_size_array = @node_size_array << node_size%>       
+      <%end%>
+			<%= render :partial => "nodes/collect_node_up", :object => edge.source %>
+    <%end%>
+  <%end%>
+  <%@i -= 1%>
+<%end%>

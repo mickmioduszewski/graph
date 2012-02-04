@@ -1,0 +1,59 @@
+<h1>Listing nodes</h1>
+
+<%= form_tag nodes_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :term, params[:term] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nodes.each do |node| %>
+  <tr>
+    <td><%= node.name %></td>
+    <td><%= node.description %></td>
+    <td><%= link_to 'Show', node %></td>
+    <td><%= link_to 'Edit', edit_node_path(node) %></td>
+    <td><%= link_to 'Destroy', node, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @nodes%>
+<br />
+
+
+<%@filetext = "digraph G {size=\"16,16\"; rankdir=\"#{current_user.user_pref.graph_direction}\"\n"%>
+<%@filetext << "edge [color=\"#666666\", arrowhead=\"open\", fontname=\"Trebuchet MS\"]; \n"%>
+<%@filetext << "node [shape=plaintext, fontname=\"Trebuchet MS\"];\n"%>
+
+<%@allnodes.each do |node|%>
+  <%@filetext << "n#{node.id} [URL=\"/nodes/#{node.id}\",  label=\"#{node.name}\"];\n"%>
+<%end%>
+<%@alledges.each do |edge|%>
+  <%@filetext << "n#{edge.source_id} -> n#{edge.sink_id}; \n"%>
+<%end%>
+
+<%@filetext << "  }"%>
+<%my_file = File.new("public/#{current_user.email}.dot","w")%>
+<%my_file.write @filetext%>
+<%my_file.close%>
+
+<p>
+
+<%@xx = `dot -Tcmapx -opublic/#{current_user.email}.map -Tpng -opublic/#{current_user.email}.png public/#{current_user.email}.dot`%> 
+<%= image_tag "/#{current_user.email}.png", {:usemap => "#G"}  %>
+
+<!--The following line reads an image file and applies it to the HTML to be used by the image-->
+<%my1_file = File.open("public/#{current_user.email}.map","r"); @filetext = my1_file.gets(nil); my1_file.close%> <%=raw @filetext%>
+</p>
+
+<%= link_to 'New Node', new_node_path %>

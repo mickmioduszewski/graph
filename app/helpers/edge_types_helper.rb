@@ -1,0 +1,2 @@
+module EdgeTypesHelper
+end

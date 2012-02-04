@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Source:</b>
+  <%= @edge.source_name %>
+</p>
+
+<p>
+  <b>Sink:</b>
+  <%= @edge.sink_name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @edge.name %>
+</p>
+
+<p>
+  <b>Edge type:</b>
+  <%= @edge.edge_type.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @edge.description %>
+</p>
+
+<%= render :partial => "nodes/paint_graph" %>
+
+<%= link_to 'Edit', edit_edge_path(@edge) %> |
+<%= link_to 'Back', edges_path %>

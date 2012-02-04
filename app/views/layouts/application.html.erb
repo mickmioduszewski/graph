@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digraph <%= params[:controller]%></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag %>
+</head>
+<body>
+
+
+  <div id="user_nav">
+    <% if user_signed_in? %>
+      Signed in as <%=current_user.email%>. Not you? <%=link_to "Sign out", destroy_user_session_path%>
+    <% else %>
+      <%=link_to "Sign up", new_user_registration_path%> or <%=link_to "Sign in", new_user_session_path%>.
+    <% end %>
+  </div>
+
+
+<% if user_signed_in? %>
+<ul class="sf-menu">
+	<li>
+		<a href="#">Menu &darr;</a>
+		<ul>
+			<li><%= link_to 'Nodes', nodes_path %></li>
+			<li><%= link_to 'Edges', edges_path %></li>
+			<li><%= link_to 'Edge types', edge_types_path %></li>
+			<li><%= link_to 'Edit user registration', edit_user_registration_path %></li>
+			<li><%= link_to 'Edit user pref', edit_user_pref_path(current_user.user_pref) %></li>
+	
+		</ul>
+	</li>
+</ul>
+<% end %>
+
+<div id="clearboth"></div>
+
+<%= yield %>
+
+</body>
+</html>
