@@ -1,14 +1,13 @@
 <h1>Listing edge_types</h1>
-
+<%= link_to image_tag("new.png"), new_edge_type_path %>
 <table>
   <tr>
     <th>Name</th>
     <th>Source type</th>
     <th>Sink type</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
 <% @edge_types.each do |edge_type| %>
@@ -16,14 +15,10 @@
     <td><%= edge_type.name %></td>
     <td><%= edge_type.source_type %></td>
     <td><%= edge_type.sink_type %></td>
-    <td><%= edge_type.description %></td>
-    <td><%= link_to 'Show', edge_type %></td>
-    <td><%= link_to 'Edit', edit_edge_type_path(edge_type) %></td>
-    <td><%= link_to 'Destroy', edge_type, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to image_tag("show.png"), edge_type %></td>
+    <td><%= link_to image_tag("edit.png"), edit_edge_type_path(edge_type) %></td>
+    <td><%= button_to '', edge_type,  method:  :delete, :form_class => "buttondel" %></td>
   </tr>
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New Edge type', new_edge_type_path %>

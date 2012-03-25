@@ -15,5 +15,6 @@
 //= require jquery-ui
 //= require hoverIntent
 //= require superfish
+//= require tinymce-jquery
 //= require common
 //= require_tree .

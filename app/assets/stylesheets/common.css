@@ -27,3 +27,27 @@ clear:both;
 	border-style: solid;
 	border-width: thin;
 }
+
+
+.framedtext {
+	border-style:       solid;
+	border-width:       thin;
+	background-color:   #F2F2F2;
+}
+
+
+.buttondel input[type=submit] {
+	background: url("delete.png") no-repeat center center;
+	width:      24px;
+	height:     24px;
+	border:     none;
+	color:      transparent;
+	padding:    0;
+    cursor:     pointer;
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size:  13px;
+    line-height:    18px;
+    text-align: left;
+}
+
+

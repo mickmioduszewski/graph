@@ -1,8 +1,37 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="/nodes/1" title="node 101" alt="" coords="5,149,115,197"/>
-<area shape="rect" id="node2" href="/nodes/2" title="node 102" alt="" coords="169,5,279,53"/>
-<area shape="rect" id="node3" href="/nodes/3" title="node 103" alt="" coords="169,77,279,125"/>
-<area shape="rect" id="node4" href="/nodes/4" title="node 104" alt="" coords="169,149,279,197"/>
-<area shape="rect" id="node5" href="/nodes/5" title="node 22" alt="" coords="175,221,273,269"/>
-<area shape="rect" id="node6" href="/nodes/6" title="node 1011" alt="" coords="163,293,285,341"/>
+<area shape="rect" id="node1" href="/nodes/19" title="Marianne&#39;s return to work choices" alt="" coords="4,184,302,221"/>
+<area shape="rect" id="node2" href="/nodes/20" title="Marianne is still not well" alt="" coords="342,143,546,180"/>
+<area shape="poly" id="edge2" href="/edges/16" alt="" coords="284,182,331,175,331,179,285,186"/>
+<area shape="rect" id="node11" href="/nodes/21" title="Marianne is well" alt="" coords="373,266,515,303"/>
+<area shape="poly" id="edge20" href="/edges/17" alt="" coords="220,219,368,261,367,265,219,223"/>
+<area shape="rect" id="node3" href="/nodes/22" title="Carry on at full load while sick" alt="" coords="800,26,1032,63"/>
+<area shape="poly" id="edge4" href="/edges/18" alt="" coords="517,141,565,129,829,63,830,67,566,133,518,145"/>
+<area shape="rect" id="node5" href="/nodes/24" title="Reduced hours while sick" alt="" coords="818,109,1014,146"/>
+<area shape="poly" id="edge8" href="/edges/20" alt="" coords="546,152,808,133,808,137,547,156"/>
+<area shape="rect" id="node8" href="/nodes/27" title="Total separation while sick" alt="" coords="814,170,1018,207"/>
+<area shape="poly" id="edge14" href="/edges/23" alt="" coords="547,165,803,180,803,184,546,169"/>
+<area shape="rect" id="node4" href="/nodes/23" title="Harmful to health" alt="" coords="1354,4,1486,41"/>
+<area shape="poly" id="edge6" href="/edges/19" title="unreasonable, not ethical, not lawful" alt="" coords="1032,37,1343,24,1343,28,1033,41"/>
+<area shape="rect" id="edge6-label" href="/edges/19" title="unreasonable, not ethical, not lawful" alt="" coords="1051,14,1289,29"/>
+<area shape="rect" id="node6" href="/nodes/25" title="Full pay" alt="" coords="1386,60,1453,97"/>
+<area shape="poly" id="edge10" href="/edges/21" title="usual treatment" alt="" coords="1014,113,1051,109,1376,79,1376,84,1051,113,1014,117"/>
+<area shape="rect" id="edge10-label" href="/edges/21" title="usual treatment" alt="" coords="1117,75,1223,89"/>
+<area shape="rect" id="node7" href="/nodes/26" title="Part pay, worked hours only" alt="" coords="1322,115,1518,152"/>
+<area shape="poly" id="edge12" href="/edges/22" title="acceptable, not lawful, not ethical" alt="" coords="1014,127,1311,130,1311,134,1014,131"/>
+<area shape="rect" id="edge12-label" href="/edges/22" title="acceptable, not lawful, not ethical" alt="" coords="1061,115,1279,130"/>
+<area shape="rect" id="node9" href="/nodes/28" title="No compensation while not well" alt="" coords="1308,176,1532,213"/>
+<area shape="poly" id="edge16" href="/edges/24" title="unlawful\nunethical\nnot good for reputation" alt="" coords="1019,187,1297,191,1297,195,1019,191"/>
+<area shape="rect" id="edge16-label" href="/edges/24" title="unlawful\nunethical\nnot good for reputation" alt="" coords="1095,147,1245,190"/>
+<area shape="rect" id="node10" href="/nodes/29" title="Worker&#39;s compensation" alt="" coords="1336,231,1504,268"/>
+<area shape="poly" id="edge18" href="/edges/25" title="not useful to either party" alt="" coords="1018,205,1051,210,1195,227,1326,240,1325,244,1195,231,1050,214,1017,209"/>
+<area shape="rect" id="edge18-label" href="/edges/25" title="not useful to either party" alt="" coords="1089,197,1251,212"/>
+<area shape="rect" id="node12" href="/nodes/30" title="Redundancy" alt="" coords="864,225,968,262"/>
+<area shape="poly" id="edge22" href="/edges/27" title="for convenience" alt="" coords="515,272,565,266,721,253,853,245,854,249,721,257,566,270,516,276"/>
+<area shape="rect" id="edge22-label" href="/edges/27" title="for convenience" alt="" coords="617,236,729,252"/>
+<area shape="rect" id="node13" href="/nodes/31" title="Full time work" alt="" coords="856,281,976,318"/>
+<area shape="poly" id="edge24" href="/edges/28" title="normal condition" alt="" coords="516,285,846,295,846,299,515,289"/>
+<area shape="rect" id="edge24-label" href="/edges/28" title="normal condition" alt="" coords="614,272,733,288"/>
+<area shape="rect" id="node14" href="/nodes/32" title="Remain part &#160;time" alt="" coords="844,336,988,373"/>
+<area shape="poly" id="edge26" href="/edges/29" title="It may be beneficial to Sax \nif the preceeding period works" alt="" coords="488,301,525,316,566,327,636,339,707,347,834,353,834,357,706,351,635,343,565,331,524,319,486,305"/>
+<area shape="rect" id="edge26-label" href="/edges/29" title="It may be beneficial to Sax \nif the preceeding period works" alt="" coords="565,298,781,329"/>
 </map>

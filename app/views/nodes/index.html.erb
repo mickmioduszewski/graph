@@ -6,24 +6,22 @@
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
-
+<%= link_to image_tag("new.png"), new_node_path %>
 
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Show</th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
 <% @nodes.each do |node| %>
   <tr>
     <td><%= node.name %></td>
-    <td><%= node.description %></td>
-    <td><%= link_to 'Show', node %></td>
-    <td><%= link_to 'Edit', edit_node_path(node) %></td>
-    <td><%= link_to 'Destroy', node, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to image_tag("show.png"), node %></td>
+    <td><%= link_to image_tag("edit.png"), edit_node_path(node) %></td>
+    <td><%= button_to '', node,  method:  :delete, :form_class => "buttondel" %></td>
   </tr>
 <% end %>
 </table>
@@ -56,4 +54,3 @@
 <%my1_file = File.open("public/#{current_user.email}.map","r"); @filetext = my1_file.gets(nil); my1_file.close%> <%=raw @filetext%>
 </p>
 
-<%= link_to 'New Node', new_node_path %>

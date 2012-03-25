@@ -8,7 +8,7 @@ gem 'rails', '3.2.0'
 gem 'sqlite3'
 gem "will_paginate"
 gem "devise"
-gem "tiny_mce"
+gem 'tinymce-rails'
 gem "devise"
 
 

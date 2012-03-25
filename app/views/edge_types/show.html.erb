@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to image_tag("list.png"), edge_types_path %>
+<%= link_to image_tag("edit.png"), edit_edge_type_path(@node) %>
 <p>
   <b>Name:</b>
   <%= @edge_type.name %>
@@ -14,12 +15,10 @@
   <b>Sink type:</b>
   <%= @edge_type.sink_type %>
 </p>
-<div  class=mcetext>
+
 <p>
   <b>Description:</b>
+    <div class="framedtext">
   <%= raw @edge_type.description %>
+    </div>
 </p>
-</div>
-
-<%= link_to 'Edit', edit_edge_type_path(@edge_type) %> |
-<%= link_to 'Back', edge_types_path %>

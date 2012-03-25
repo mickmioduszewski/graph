@@ -10,7 +10,7 @@
         <%@nodes_array = @nodes_array << edge.source%>
         <%@node_size_array = @node_size_array << node_size%>       
       <%end%>
-			<%= render :partial => "nodes/collect_node_up", :object => edge.source %>
+			<%= render :partial => "nodes/collect_node_up", :object => edge.source-%>
     <%end%>
   <%end%>
   <%@i -= 1%>

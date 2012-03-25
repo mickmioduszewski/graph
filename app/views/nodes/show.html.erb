@@ -1,10 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to image_tag("list.png"), nodes_path %>
+<%= link_to image_tag("edit.png"), edit_node_path(@node) %>
+
+
 <p><b>Name:</b><%= @node.name %></p>
 
 <p>
   <b>Description:</b>
-  <%= @node.description %>
+  <div class="framedtext">
+  <%= raw @node.description %>
+  </div>
 </p>
 
 <%@edge = Edge.new; @edge.source_id=@node.id; @edge.sink_id=@node.id%>
@@ -17,9 +23,6 @@
 	<div id="myContent1" style="display: none;"><%= render 'edges/form' %></div>     
 </div>
 
+<%= render :partial => "paint_graph"-%>
 
 
-<%= render :partial => "paint_graph" %>
-
-<%= link_to 'Edit', edit_node_path(@node) %> |
-<%= link_to 'Back', nodes_path %>

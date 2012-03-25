@@ -32,6 +32,11 @@
     <%= f.label :edge_type_id %><br />
     <%= f.collection_select :edge_type_id, EdgeType.find(:all), :id, :name %>
   </div></div>
+  
+    <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :class=>"mcetext", :rows => 40, :cols => 120 %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

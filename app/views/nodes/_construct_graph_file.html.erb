@@ -1,4 +1,4 @@
-<%@filetext = "digraph G {size=\"16,16\"; rankdir=\"#{current_user.user_pref.graph_direction}\"\n"%>
+<%@filetext = "digraph G {size=\"16,16!\"; rankdir=\"#{current_user.user_pref.graph_direction}\"\n"%>
 <%@filetext << "edge [color=\"#666666\", arrowhead=\"open\", fontname=\"Trebuchet MS\"]; \n"%>
 <%@filetext << "node [shape=plaintext, fontname=\"Trebuchet MS\"];\n"%>
 
@@ -9,23 +9,23 @@
     <%@filetext << ", style=filled fillcolor=\"#00477f\", fontcolor=\"White\""%>
   <%end%>
   <%@filetext << "];\n"%>
-  <%@i+=1%>  
+  <%@i+=1%>
 <%end%>
 
 <%@i=0%>
 <%@edges_array.each do |edge|%>
-	<% if edge.name == '.' 								then 	edgename=''-%>
-	<% elsif !edge.name.empty? 						then 	edgename=edge.name -%>
-	<% elsif 	edge.edge_type.name ==	'.' then	edgename=''-%>
-	<% else 																		edgename=edge.edge_type.name -%>
+	<% if edge.name == '.' then edgename=''-%>
+	<% elsif !edge.name.empty? then edgename=edge.name -%>
+	<% elsif edge.edge_type.name ==	'.' then edgename=''-%>
+	<% else edgename=edge.edge_type.name -%>
 	<% end -%>
-	
+
 	<%@filetext << "n#{edge.source_id} -> n#{edge.sink_id} [URL=\"/edges/#{edge.id}\""%>
 	<% if edgename.empty?; @filetext <<"];\n"%>
-	<% else; 						@filetext <<",  label=\"#{edgename}\", fontsize=\"#{@edge_size_array[@i]}\"];\n"%>
+	<% else; @filetext <<",  label=\"#{edgename}\", fontsize=\"#{@edge_size_array[@i]}\"];\n"%>
 	<% end -%>
-	
-	
+
+
   <%@i+=1%>
 <%end-%>
 <%@filetext << "  }"%>

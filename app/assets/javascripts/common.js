@@ -1,4 +1,9 @@
-
+$(function() {
+  $(".mcetext").tinymce({
+    theme: 'advanced'
+  });
+});
+  
 $(document).ready(function() { 
         $('ul.sf-menu').superfish(); 
     }); 

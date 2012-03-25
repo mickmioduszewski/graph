@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to image_tag("list.png"), edges_path %>
+<%= link_to image_tag("edit.png"), edit_edge_path(@edge) %>
 <p>
   <b>Source:</b>
   <%= @edge.source_name %>
@@ -17,15 +18,16 @@
 
 <p>
   <b>Edge type:</b>
-  <%= @edge.edge_type.name %>
+  <%=@edge.edge_type.name %>
 </p>
+
+
 
 <p>
   <b>Description:</b>
-  <%= @edge.description %>
+  <div class="framedtext">
+  <%= raw @edge.description %>
+  </div>
 </p>
 
 <%= render :partial => "nodes/paint_graph" %>
-
-<%= link_to 'Edit', edit_edge_path(@edge) %> |
-<%= link_to 'Back', edges_path %>
